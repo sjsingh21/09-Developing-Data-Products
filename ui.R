@@ -2,6 +2,11 @@ shinyUI(fluidPage(
   titlePanel("USA region Geographic vs. Economic Cost impact on Selective Disease"),
     fluidRow(
       h5("Author : Sarabjeet Singh, Date : June 21, 2015"),  
+      h5("Pitch for this project is available in the slides at RPubs link "),
+      a(href="http://rpubs.com/sjsingh21/87709", "http://rpubs.com/sjsingh21/87709!"),
+      h5("Codes for this project are available in Github repository link  "),
+      a(href="https://github.com/sjsingh21/09-Developing-Data-Products/tree/master", "https://github.com/sjsingh21/09-Developing-Data-Products/tree/master!"),
+      
       
       h4("Project Overview"),
       h5("This project is a unique study on USA region Geographic vs. Economic Cost impact on Selective Disease.", align = "left"),
@@ -12,9 +17,10 @@ shinyUI(fluidPage(
          Extracted sum of Average Covered Charges on above categories", align = "left"),
       h4("Operation Guidelines"),
       h5("Operation requires user input through two widgets below - 1. Radio Button to select Disease Group and 2. Slider to select Mean value"),
+      h5("Based on option selected in Radio button option, a chart is displayed on Average Covered Charges for respective regions. This shows the Disease Cost impact on the region."),
+      
       headerPanel("Disease Group"),
-  radioButtons("DGlabel", label = h5("Select Disease Group from below options.   
-                                     Based on this option a chart is displayed on Average Covered Charges for respective regions. This shows the Disease Cost impact on the region."),
+  radioButtons("DGlabel", label = h5("Select Disease Group from below options "),
                       choices = list("Respiratory" , "Cardiac") ,
                                      selected = "Respiratory")),
   sidebarPanel(
